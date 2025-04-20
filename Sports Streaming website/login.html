@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login to SportsStream</title>
+  <style>
+    :root {
+      --netflix-red: #E50914;
+      --dark-bg: #141414;
+      --text-light: #F5F5F5;
+    }
+
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    /* Container for the form */
+    .form-container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px 25px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .form-container h2 {
+      margin-bottom: 25px;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: var(--text-light);
+    }
+
+    /* Input fields */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background-color: #222;
+      color: var(--text-light);
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus {
+      border-color: var(--netflix-red);
+      outline: none;
+      background-color: #1a1a1a;
+    }
+
+    /* Login button */
+    button.login-button {
+      width: 100%;
+      padding: 14px;
+      background-color: var(--netflix-red);
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button.login-button:hover {
+      background-color: #f40612;
+      transform: scale(1.05);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 450px) {
+      .form-container {
+        padding: 25px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Login to SportsStream</h2>
+    <form action="login.php" method="POST" novalidate>
+      <input type="text" name="name" placeholder="Name" required autocomplete="name" />
+      <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+      <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel" />
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+</body>
+</html>

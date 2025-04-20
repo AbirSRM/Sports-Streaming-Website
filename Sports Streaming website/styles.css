@@ -1,0 +1,71 @@
+/* Netflix-inspired colors with green accents */
+/*http://localhost/sportsstream/login.html*/
+
+:root {
+  --netflix-red: #E50914;
+  --prime-blue: #1F8A8C;
+  --sport-green: #2E8B57;
+  --dark-bg: #141414;
+  --text-light: #F5F5F5;
+}
+
+/* Body styling */
+body {
+  background: var(--dark-bg);
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container for the form */
+.form-container {
+  max-width: 400px; /* Limit width */
+  margin: 0 auto;   /* Center horizontally */
+  padding: 20px;    /* Inner spacing */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animate container on load */
+.container.loaded {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%; /* Full width within container */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in width */
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Button styling */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--netflix-red);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #F40612;
+  transform: scale(1.05);
+}
+
+
